@@ -42,6 +42,12 @@
   cursor: pointer;
 }
 
+.nav-item a.active {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: 0.3s all ease-in-out;
+}
+
 .vertical-line {
   width: 2px;
   height: 15px;
