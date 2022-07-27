@@ -15,7 +15,6 @@ export const fetchRockets = createAsyncThunk(
   'rocket/fetchRockets',
   async () => {
     const response = await axios.get(baseUrl);
-    console.log(response.data);
     return response.data;
   }
 );
@@ -26,12 +25,15 @@ const RocketSlice = createSlice({
   reducers: {},
   extraReducers(builder) {
     builder
-      //   .addCase(fetchRockets.pending, (state) => {
-      //     state.status = 'loading';
-      //   })
+      .addCase(fetchRockets.pending, (state) => {
+        state.status = 'loading';
+      })
       .addCase(fetchRockets.fulfilled, (state, action) => {
-        // state.status = 'succeeded';
+        state.status = 'succeeded';
         state.data = state.data.concat(action.payload);
+      })
+      .addCase(fetchRockets.rejected, (state) => {
+        state.status = 'failed';
       });
   },
 });
