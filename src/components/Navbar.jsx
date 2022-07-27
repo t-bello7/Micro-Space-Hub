@@ -1,7 +1,7 @@
-import { NavLink } from "react-router-dom";
-import "./Navbar.css";
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
 
-const image = require("../assets/planet.png");
+const image = require('../assets/planet.png');
 
 function Navbar() {
   return (
