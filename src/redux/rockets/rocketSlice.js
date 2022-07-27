@@ -22,7 +22,11 @@ export const fetchRockets = createAsyncThunk(
 const RocketSlice = createSlice({
   name: 'rocket',
   initialState,
-  reducers: {},
+  reducers: {
+    updateActive(state, action) {
+      state.data[action.payload - 1].active = !state.data[action.payload - 1].active;
+    },
+  },
   extraReducers(builder) {
     builder
       .addCase(fetchRockets.pending, (state) => {
@@ -39,5 +43,5 @@ const RocketSlice = createSlice({
 });
 
 export const selectAllRockets = (state) => state.rockets;
-
+export const { updateActive } = RocketSlice.actions;
 export default RocketSlice.reducer;
