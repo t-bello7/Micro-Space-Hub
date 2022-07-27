@@ -9,9 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 /* eslint-disable comma-dangle */
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <Provider store={store}>
+    <App />
+  </Provider>
 );

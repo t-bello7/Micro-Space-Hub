@@ -1,20 +1,37 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+/* eslint-disable no-param-reassign */
+/* eslint-disable comma-dangle */
+/* eslint-disable camelcase */
+/* eslint-disable quotes */
 /* eslint-disable object-curly-newline */
-import { Badge, Button, Container, Table } from 'react-bootstrap';
+
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import {
+  Badge,
+  Button,
+  Container,
+  Table,
+} from "react-bootstrap";
+import {
+  fetchMissions,
+  joinMission,
+} from "../redux/missions/missionsSlice";
 
 function Missions() {
-  const [missions, setMissions] = useState([]);
+  const { data: missions, status } = useSelector(
+    (store) => store.missions
+  );
+  const dispatch = useDispatch();
+  const testData = missions.find(
+    (item) => item.mission_id === "9D1B7E0"
+  );
+  console.log(testData);
 
   useEffect(() => {
-    const fetchMissions = async () => {
-      const { data } = await axios('https://api.spacexdata.com/v3/missions');
-
-      setMissions(data);
-      console.log(data);
-    };
-    fetchMissions();
-  }, [setMissions]);
+    if (status === "idle") {
+      dispatch(fetchMissions());
+    }
+  }, []);
 
   /* eslint-disable jsx-a11y/control-has-associated-label */
   /* eslint-disable react/jsx-closing-bracket-location */
@@ -26,7 +43,8 @@ function Missions() {
           bordered
           hover
           className="my-5"
-          style={{ fontSize: '1.5rem' }}>
+          style={{ fontSize: "1.5rem" }}
+        >
           <thead>
             <tr className="font-weight-bold">
               <th className="p-3">Mission</th>
@@ -38,7 +56,10 @@ function Missions() {
           <tbody>
             {missions.map((mission) => (
               <tr key={mission.mission_id}>
-                <td className="p-4" style={{ fontWeight: 'bold' }}>
+                <td
+                  className="p-4"
+                  style={{ fontWeight: "bold" }}
+                >
                   {mission.mission_name}
                 </td>
                 <td className="align-middle py-4 px-3">
@@ -46,26 +67,41 @@ function Missions() {
                 </td>
                 <td
                   className="px-5 align-middle"
-                  style={{ width: '200px', textAlign: 'center' }}>
+                  style={{
+                    width: "200px",
+                    textAlign: "center",
+                  }}
+                >
                   <Badge
                     bg="secondary"
                     style={{
-                      fontSize: '1.15rem',
-                      padding: '0.75rem 1rem',
-                    }}>
+                      fontSize: "1.15rem",
+                      padding: "0.75rem 1rem",
+                    }}
+                  >
                     NOT A MEMBER
                   </Badge>
                 </td>
                 <td
                   className="px-5 align-middle"
-                  style={{ width: '200px', textAlign: 'center' }}>
+                  style={{
+                    width: "200px",
+                    textAlign: "center",
+                  }}
+                >
                   <Button
                     variant="outline-secondary btn-lg"
                     style={{
-                      fontWeight: '600',
-                      fontSize: '1.3rem',
-                      padding: '0.75rem 1rem',
-                    }}>
+                      fontWeight: "600",
+                      fontSize: "1.3rem",
+                      padding: "0.75rem 1rem",
+                    }}
+                    onClick={() => {
+                      dispatch(
+                        joinMission(mission.mission_id)
+                      );
+                    }}
+                  >
                     Join Mission
                   </Button>
                 </td>
