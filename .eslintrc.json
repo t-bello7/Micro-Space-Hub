@@ -21,7 +21,8 @@
     "no-shadow": "off",
     "comma-dangle": "off",
     "quotes": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "linebreak-style": "off"
   },
   "ignorePatterns": [
     "dist/",
