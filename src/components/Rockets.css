@@ -1,12 +1,8 @@
-.rocket__container{
-    margin: 3rem 10%;
-}
-.rocket__item{
-    display: flex;
-    gap: 1rem;
+.rocket__container {
+  margin: 3rem 10%;
 }
 
 .rocket__image {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
