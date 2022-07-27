@@ -20,7 +20,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "comma-dangle": "off",
-    "quotes": "off"
+    "quotes": "off",
+    "no-param-reassign": "off"
   },
   "ignorePatterns": [
     "dist/",

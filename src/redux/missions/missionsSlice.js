@@ -1,24 +1,18 @@
 /* eslint-disable no-param-reassign */
-/* eslint-disable comma-dangle */
 /* eslint-disable camelcase */
-/* eslint-disable quotes */
-
-import {
-  createSlice,
-  createAsyncThunk,
-} from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
-  status: "idle",
+  status: 'idle',
   error: null,
   data: [],
 };
 
-const baseURL = "https://api.spacexdata.com/v3/missions";
+const baseURL = 'https://api.spacexdata.com/v3/missions';
 
 export const fetchMissions = createAsyncThunk(
-  "missions/fetchMissions",
+  'missions/fetchMissions',
   async () => {
     const response = await axios.get(baseURL);
     return response.data;
@@ -26,7 +20,7 @@ export const fetchMissions = createAsyncThunk(
 );
 
 const missionsSlice = createSlice({
-  name: "missions",
+  name: 'missions',
   initialState,
   reducers: {
     joinMission: (state, action) => {
@@ -38,22 +32,31 @@ const missionsSlice = createSlice({
         return mission;
       });
     },
+    leaveMission: (state, action) => {
+      const mission_id = action.payload;
+      state.data = state.data.map((mission) => {
+        if (mission_id === mission.mission_id) {
+          mission.reserved = false;
+        }
+        return mission;
+      });
+    },
   },
   extraReducers(builder) {
     builder
       .addCase(fetchMissions.pending, (state) => {
-        state.status = "loading";
+        state.status = 'loading';
       })
       .addCase(fetchMissions.fulfilled, (state, action) => {
-        state.status = "succeeded";
+        state.status = 'succeeded';
         state.data = state.data.concat(action.payload);
       })
       .addCase(fetchMissions.rejected, (state, action) => {
-        state.status = "failed";
+        state.status = 'failed';
         state.error = action.error;
       });
   },
 });
-// console.log(missionsSlice);
-export const { joinMission } = missionsSlice.actions;
+
+export const { joinMission, leaveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
