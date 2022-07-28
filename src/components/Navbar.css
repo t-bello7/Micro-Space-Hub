@@ -31,6 +31,15 @@
   font-size: 2.5rem;
 }
 
+.nav-item a {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 1.6rem;
+  color: rgb(17, 153, 221);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .logo-name a:hover {
   color: rgb(16, 119, 171);
   cursor: pointer;
@@ -42,15 +51,6 @@
   align-items: center;
   padding-right: 1.5rem;
   margin-right: 3rem;
-}
-
-.nav-item a {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  font-size: 1.6rem;
-  color: rgb(17, 153, 221);
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .nav-item a:hover {
