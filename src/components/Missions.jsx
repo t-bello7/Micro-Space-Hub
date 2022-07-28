@@ -1,7 +1,5 @@
-/* eslint-disable camelcase */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-/* eslint-disable object-curly-newline */
 import { Badge, Button, Container, Table } from 'react-bootstrap';
 import {
   fetchMissions,
