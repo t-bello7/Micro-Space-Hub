@@ -18,7 +18,7 @@ function MyProfile() {
 
   return (
     <div>
-      <Container style={{ margin: '5rem auto 0 auto' }}>
+      <Container style={{ margin: '13rem auto 0 auto' }}>
         <Row>
           <Col className="mx-5">
             <h2

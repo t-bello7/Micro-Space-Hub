@@ -23,7 +23,7 @@ function Missions() {
   /* eslint-disable react/jsx-closing-bracket-location */
   return (
     <div>
-      <Container>
+      <Container style={{ marginTop: '11.5rem', paddingBottom: '2rem' }}>
         <Table
           striped
           bordered
@@ -32,9 +32,15 @@ function Missions() {
           style={{ fontSize: '1.5rem' }}>
           <thead>
             <tr className="font-weight-bold">
-              <th className="p-3">Mission</th>
-              <th className="p-3">Description</th>
-              <th className="p-3">Status</th>
+              <th className="p-3" style={{ fontSize: '1.6rem' }}>
+                Mission
+              </th>
+              <th className="p-3" style={{ fontSize: '1.6rem' }}>
+                Description
+              </th>
+              <th className="p-3" style={{ fontSize: '1.6rem' }}>
+                Status
+              </th>
               <th />
             </tr>
           </thead>
@@ -86,6 +92,11 @@ function Missions() {
                         fontWeight: '600',
                         fontSize: '1.3rem',
                         padding: '0.75rem 1rem',
+                        '&:active, &:focus': {
+                          outline: 'none',
+                          border: 'none',
+                          backgroundColor: 'none',
+                        },
                       }}
                       onClick={() => {
                         dispatch(joinMission(mission.mission_id));
