@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="container"
+    style={
+      Object {
+        "marginTop": "11.5rem",
+        "paddingBottom": "2rem",
+      }
+    }
+  >
+    <table
+      className="my-5 table table-striped table-bordered table-hover"
+      style={
+        Object {
+          "fontSize": "1.5rem",
+        }
+      }
+    >
+      <thead>
+        <tr
+          className="font-weight-bold"
+        >
+          <th
+            className="p-3"
+            style={
+              Object {
+                "fontSize": "1.6rem",
+              }
+            }
+          >
+            Mission
+          </th>
+          <th
+            className="p-3"
+            style={
+              Object {
+                "fontSize": "1.6rem",
+              }
+            }
+          >
+            Description
+          </th>
+          <th
+            className="p-3"
+            style={
+              Object {
+                "fontSize": "1.6rem",
+              }
+            }
+          >
+            Status
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;

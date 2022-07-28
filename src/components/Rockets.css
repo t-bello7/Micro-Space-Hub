@@ -1,0 +1,12 @@
+.rocket__container {
+  margin: 8rem 10%;
+  padding-bottom: 3rem;
+}
+
+.rocket__image {
+  width: 300px;
+  height: 250px;
+  margin-right: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
+}

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="container"
+    style={
+      Object {
+        "margin": "13rem auto 0 auto",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="mx-5 col"
+      >
+        <h2
+          className="text-muted"
+          style={
+            Object {
+              "fontSize": "2.5rem",
+              "fontWeight": "600",
+            }
+          }
+        >
+          My Missions
+        </h2>
+        <ol
+          className="pt-3 list-group list-group-numbered"
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "fontSize": "1.7rem",
+              "fontWeight": "500",
+            }
+          }
+        />
+      </div>
+      <div
+        className="ml-3 col"
+      >
+        <h2
+          className="text-muted"
+          style={
+            Object {
+              "fontSize": "2.5rem",
+              "fontWeight": "600",
+            }
+          }
+        >
+          My Rockets
+        </h2>
+        <ol
+          className="pt-3 list-group list-group-numbered"
+          onKeyDown={[Function]}
+          style={
+            Object {
+              "fontSize": "1.7rem",
+              "fontWeight": "500",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
