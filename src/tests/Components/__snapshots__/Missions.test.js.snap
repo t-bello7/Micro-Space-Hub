@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <div
+    className="container"
+  >
+    <table
+      className="my-5 table table-striped table-bordered table-hover"
+      style={
+        Object {
+          "fontSize": "1.5rem",
+        }
+      }
+    >
+      <thead>
+        <tr
+          className="font-weight-bold"
+        >
+          <th
+            className="p-3"
+          >
+            Mission
+          </th>
+          <th
+            className="p-3"
+          >
+            Description
+          </th>
+          <th
+            className="p-3"
+          >
+            Status
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
