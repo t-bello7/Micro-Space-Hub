@@ -1,3 +1,6 @@
+/* eslint-disable  object-curly-newline */
+/* eslint-disable arrow-body-style */
+/* eslint-disable  react/jsx-closing-bracket-location */
 import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 
