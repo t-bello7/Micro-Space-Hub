@@ -83,6 +83,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse
-- Redux Team
+- Microverse.
+- Redux ToolKit Team
 - Space X
