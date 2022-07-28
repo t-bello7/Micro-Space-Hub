@@ -1,4 +1,4 @@
-# Micro-Space-Hub
+# Space-Travelers-Hub
 
 The Space Travelers' Hub consists of Rockets, Missions, and the My Profile section. The application provides commercial and scientific space travel services by allowing users to book rockets and join selected space missions.
 
