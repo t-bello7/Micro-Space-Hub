@@ -1,3 +1,6 @@
+/* eslint-disable  object-curly-newline */
+/* eslint-disable arrow-body-style */
+/* eslint-disable  react/jsx-closing-bracket-location */
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import Button from 'react-bootstrap/Button';

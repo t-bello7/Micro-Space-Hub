@@ -1,3 +1,6 @@
+/* eslint-disable  object-curly-newline */
+/* eslint-disable arrow-body-style */
+/* eslint-disable  react/jsx-closing-bracket-location */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Badge, Button, Container, Table } from 'react-bootstrap';
