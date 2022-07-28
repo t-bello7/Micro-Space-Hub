@@ -1,5 +1,3 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable camelcase */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -24,18 +22,18 @@ const missionsSlice = createSlice({
   initialState,
   reducers: {
     joinMission: (state, action) => {
-      const mission_id = action.payload;
+      const missionId = action.payload;
       state.data = state.data.map((mission) => {
-        if (mission_id === mission.mission_id) {
+        if (missionId === mission.mission_id) {
           mission.reserved = true;
         }
         return mission;
       });
     },
     leaveMission: (state, action) => {
-      const mission_id = action.payload;
+      const missionId = action.payload;
       state.data = state.data.map((mission) => {
-        if (mission_id === mission.mission_id) {
+        if (missionId === mission.mission_id) {
           mission.reserved = false;
         }
         return mission;

@@ -1,8 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-/* eslint-disable comma-dangle */
-/* eslint-disable no-param-reassign */
 const initialState = {
   status: 'idle',
   error: null,
