@@ -10,3 +10,9 @@
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.08) 0 4px 12px;
 }
+
+@media (max-width: 1000px) {
+  .rocket__image {
+    width: 100%;
+  }
+}

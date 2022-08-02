@@ -37,7 +37,7 @@ function Rockets() {
     <ListGroup className="rocket__container" variant="flush">
       {rockets.map((rocket) => {
         return (
-          <ListGroup.Item key={rocket.id} className="mt-5 py-4 d-flex">
+          <ListGroup.Item key={rocket.id} className="mt-5 py-4 d-lg-flex flex-sm-row">
             <Image
               src={rocket.flickr_images[0]}
               alt="rocket-pic"
