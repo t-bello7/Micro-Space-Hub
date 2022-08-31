@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   z-index: 3;
-  width: 100vw;
+  width: 100%;
   box-shadow: 0 2px 4px 0 rgba(90, 90, 90, 0.2);
 }
 
